@@ -9,13 +9,16 @@ $brand-color: #2A7AE2;
 // Width of the content area
 $content-width: 800px;
 
-$on-palm: 600px;
-$on-laptop: 800px;
+// Media query sizes
+$display-palm: 500px;
+$display-tablet: 1024px;
+$display-desktop: 1224px;
+$display-desktop-xl: 1824px;
 
 $base-color: #6B90FF;
-$secondary-color: #DD33FF;
-
 $gradient-left: #9270FF;
 $gradient-right: #B752FF;
+$secondary-color: #DD33FF;
 
-$header-opacity-fade: 0.5;
+
+$header-opacity-fade: .5;
