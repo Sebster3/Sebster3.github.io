@@ -22,8 +22,8 @@ permalink: pretty
 
 host: 0.0.0.0
 
-gems:
-  - octopress-autoprefixer
+# gems:
+#   - octopress-autoprefixer
 
-sass:
-  style: compressed
+# sass:
+#   style: compressed
