@@ -21,9 +21,3 @@ markdown: kramdown
 permalink: pretty
 
 host: 0.0.0.0
-
-# gems:
-#   - octopress-autoprefixer
-
-# sass:
-#   style: compressed
