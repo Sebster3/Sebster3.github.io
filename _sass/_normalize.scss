@@ -25,26 +25,26 @@ summary {
   display: block;
 }
 
-// audio,
-// canvas,
-// progress,
-// video {
-//   display: inline-block;
-// }
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
 
-// audio:not([controls]) {
-//   display: none;
-//   height: 0;
-// }
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 
-// progress {
-//   vertical-align: baseline;
-// }
+progress {
+  vertical-align: baseline;
+}
 
-// template,
-// [hidden] {
-//   display: none;
-// }
+template,
+[hidden] {
+  display: none;
+}
 
 a {
   background-color: transparent;
@@ -56,11 +56,11 @@ a:hover {
   outline-width: 0;
 }
 
-// abbr[title] {
-//   border-bottom: none;
-//   text-decoration: underline;
-//   text-decoration: underline dotted;
-// }
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
 
 b,
 strong {
@@ -72,77 +72,77 @@ strong {
   font-weight: bolder;
 }
 
-// dfn {
-//   font-style: italic;
-// }
+dfn {
+  font-style: italic;
+}
 
 h1 {
   font-size: 2em;
   margin: .67em 0;
 }
 
-// mark {
-//   background-color: #FFFF00;
-//   color: #000000;
-// }
+mark {
+  background-color: #FFFF00;
+  color: #000000;
+}
 
-// small {
-//   font-size: 80%;
-// }
+small {
+  font-size: 80%;
+}
 
-// sub,
-// sup {
-//   font-size: 75%;
-//   line-height: 0;
-//   position: relative;
-//   vertical-align: baseline;
-// }
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
 
-// sub {
-//   bottom: -.25em;
-// }
+sub {
+  bottom: -.25em;
+}
 
-// sup {
-//   top: -.5em;
-// }
+sup {
+  top: -.5em;
+}
 
 img {
   border-style: none;
 }
 
-// svg:not(:root) {
-//   overflow: hidden;
-// }
+svg:not(:root) {
+  overflow: hidden;
+}
 
-// code,
-// kbd,
-// pre,
-// samp {
-//   font-family: monospace, monospace;
-//   font-size: 1em;
-// }
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
 
-// figure {
-//   margin: 1em 40px;
-// }
+figure {
+  margin: 1em 40px;
+}
 
-// hr {
-//   box-sizing: content-box;
-//   height: 0;
-//   overflow: visible;
-// }
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
 
-// button,
-// input,
-// select,
-// textarea {
-//   font: inherit;
-//   margin: 0;
-// }
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
 
-// optgroup {
-//   font-weight: bold;
-// }
+optgroup {
+  font-weight: bold;
+}
 
 button,
 input {
