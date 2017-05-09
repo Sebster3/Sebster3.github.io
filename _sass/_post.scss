@@ -1,0 +1,110 @@
+$post-text-padding: 15px;
+
+// for BODY element
+.hasPost { background-color: #DDDDDD;}
+
+.post {
+  @extend %top-offset-wrapper-styles;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 1em 0;
+  background-color: #FFFFFF;
+  position: relative;
+  border-radius: $border-radius;
+  @include castShadow($fade: .1);
+
+  p {
+    padding: 0 $post-text-padding;
+    @media (min-width: $on-tablet){
+      padding: 0 ($post-text-padding + 5);}
+  }
+
+  img { width: 100%;}
+
+  &-return {
+    margin: 0 0 1em;
+    @media (min-width: $on-tablet){
+      margin-bottom: 1em;}
+  }
+
+  &-title {
+    padding: 0 $post-text-padding;
+    @media (min-width: $on-tablet){
+      padding: 0 ($post-text-padding + 5);}
+  }
+
+  &-subtitle {
+    padding: 0 $post-text-padding;
+    @media (min-width: $on-tablet){
+      padding: 0 ($post-text-padding + 5);}
+  }
+
+  &-img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    margin: 1.75em 0;
+
+    @media (min-width: $on-tablet){
+      border-radius: 5px;
+      width: 110%;
+      left: -5%;
+      @include castShadow($length: 1.1, $fade: .1);}
+
+    @media (min-width: $on-desktop){ width: 115%; left: -7.5%;}
+
+    &:last-child { padding-bottom: 0;}
+
+    p { margin: 0.1em 0 0.4em;}
+  }
+
+  @media (min-width: $on-tablet){ padding: 1em 15px 15px;}
+
+  @media (min-width: $on-desktop){ padding: 1em 30px 30px;}
+}
+
+.tag {
+  border-radius: 5px;
+  padding: 1px 8px 3px;
+  cursor: pointer;
+  color: $base-color;
+
+  &:hover {
+    color: $secondary-color;
+
+    &::before { color: $secondary-color;}
+  }
+
+  &::before {
+    content: '#';
+    padding-right: 2px;
+    font-weight: bold;
+  }
+
+  &s {
+    text-align: center;
+    line-height: 1.8;}
+
+  &-separator {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: #666;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #DDD;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      z-index: -1;
+      top: 50%;}
+
+    span {
+      background-color: #FFF;
+      padding: 1px 8px 3px;}
+  }
+}

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body>
-        {% include header.html %}
+    <body {% if page.customClass %}class='{{ page.customClass}}'{% endif %}>
         {{ content }}
         {% include footer.html %}
     </body>

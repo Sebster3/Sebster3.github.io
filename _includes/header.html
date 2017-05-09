@@ -1,11 +1,9 @@
 <header class="masthead">
     <ul class="masthead-nav">
-        <a class="masthead-link {% if page.url == '/who/' %}masthead-isActive{% endif %}" href="{{site.baseurl}}/who"><li>Who</li></a>
-        <a class="masthead-link {% if page.url == '/what/' %}masthead-isActive{% endif %}" href="{{site.baseurl}}/what"><li>What</li></a>
-        <a class="masthead-link {% if page.url == '/' %}masthead-isActive{% endif %}" href="{{site.baseurl}}/">
-            <li><img height="60px" src="{{site.baseurl}}/Images/Interweaved.png"></li>
-        </a>
-        <a class="masthead-link {% if page.url == '/where/' %}masthead-isActive{% endif %}" href="{{site.baseurl}}/where"><li>Where</li></a>
-        <a class="masthead-link {% if page.url == '/why/' %}masthead-isActive{% endif %}" href="{{site.baseurl}}/why"><li>Why</li></a>
+        <a class="masthead-link{% if page.url contains 'Work' or page.url == '/Work/' %} masthead-isActive{% endif %}" href='/work'>Work</a>
+        <!-- <a class="masthead-link disabled{% if page.url contains 'about' %} masthead-isActive{% endif %}" href="#">About</a> -->
+        <a class="masthead-link masthead-link--logo{% if page.url == '/' %} masthead-isActive{% endif %}" href='/'><img height='60px' src='/Images/Interweaved.png'></a>
+        <a class="masthead-link{% if page.url contains 'blog' or page.url == '/Blog/' %} masthead-isActive{% endif %}" href='/blog'>Blog</a>
+        <!-- <a class="masthead-link disabled{% if page.url contains 'contact' %} masthead-isActive{% endif %}" href="#">Contact</a> -->
     </ul>
 </header>

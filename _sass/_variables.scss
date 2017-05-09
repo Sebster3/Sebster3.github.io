@@ -1,21 +1,27 @@
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size: 16px;
-$small-font-size: $base-font-size * .875;
+$base-font-family: "Montserrat Web", Helvetica, Arial, sans-serif;
+$base-font-size: 15px;
+$base-font-weight: 300;
+$ratio: 1.5;
 
-$text-color: #222222;
+$text-color: #333333;
+$text-accent-color: #7F7F7F;
 $background-color: #FDFDFD;
-$brand-color: #2A7AE2;
 
-// Width of the content area
-$content-width: 800px;
+// Content area
+$content-width: 90%;
+$content-max-width: 760px;
+
+// Common border radius
+$border-radius: 5px;
 
 // Media query sizes
-$display-palm: 500px;
-$display-tablet: 1024px;
-$display-desktop: 1224px;
-$display-desktop-xl: 1824px;
+$on-tablet: 600px;
+$on-desktop: 900px;
+$on-desktop-l: 1200px;
+$on-desktop-xl: 1800px;
 
-$base-color: #6B90FF;
+// Gradient colors
+$base-color: #5a7bff;
 $gradient-left: #9270FF;
 $gradient-right: #B752FF;
 $secondary-color: #DD33FF;

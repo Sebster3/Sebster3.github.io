@@ -1,0 +1,52 @@
+---
+# Blog Index
+layout: blog
+journal: index
+---
+<script>
+// PARAMS: wrapper class, children class
+var calcWrapperHeight = function(){
+  var windowWidth = window.innerWidth;
+
+  if (windowWidth < 600){
+    listingsWrapper[0].style.height = 'auto';
+  } else if (windowWidth >= 600){
+    var totalHeight = 0;
+
+    for (i = 0; i < listings.length; i++){
+      totalHeight += listings[i].clientHeight;
+    }
+
+    var calculatedHeight = ((totalHeight / 2) + (34 * listings.length)) +"px";
+    listingsWrapper[0].style.height = calculatedHeight;
+    console.log(calculatedHeight);
+  }
+};
+
+</script>
+{% include header-hero.html %}
+<main class='listings'>
+  {% for post in site.posts %}
+    <a class='listing-link' href='{{ site.baseurl }}{{ post.url }}'>
+      <figure class='listing' style='background-image: url(/Images/Blog/{{ post.cardBackground }})'>
+        <h2 class='listing-title'>{{ post.title }}</h2>
+        <div>
+          <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
+          <p>{{ post.excerpt | truncatewords:25 }}</p>
+        </div>
+      </figure>
+    </a>
+  {% endfor %}
+</main>
+<!-- <script type="text/javascript">
+var listings = document.getElementsByClassName('listing');
+var listingsWrapper = document.getElementsByClassName('listings');
+
+calcWrapperHeight();
+window.onresize = calcWrapperHeight;
+</script> -->
+</main>
+<style>
+.hero {background-image: url('{{ site.darkeningShim }}'), url('../Images/Sasha-Moody.jpg');}
+body { background-color: #DDDDDD;}
+</style>

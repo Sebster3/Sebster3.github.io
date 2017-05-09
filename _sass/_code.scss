@@ -1,0 +1,36 @@
+code {
+    background-color: rgba($base-color, .15);
+    border: 1px solid rgba($base-color, .5);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+pre{
+	background-color: rgba(desaturate($base-color, 45%), .15);
+    border-left: 5px solid rgba($base-color, .5);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+	padding: 3px 8px;
+    margin: 0 15px;
+    overflow-x: auto;
+    position: relative;
+    z-index: 5;
+
+    &::after {
+        content: "code";
+        position: absolute;
+        top: 1px;
+        right: 5px;
+        z-index: 1;
+        color: #AAA;}
+
+	code {
+		background-color: initial;
+		border: 0;
+		border-radius: 0;
+		padding: 0;}
+
+    @media (min-width: $on-tablet){
+        margin: 0 20px;
+    }
+}

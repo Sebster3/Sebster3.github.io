@@ -1,0 +1,42 @@
+.cards {
+  @extend %main-wrapper-styles;
+  max-width: 1000px;
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card {
+  padding: 100px 0 4px;
+  background: no-repeat top center/auto 100px, no-repeat bottom center/auto 100px;
+  border-radius: $border-radius;
+  overflow: hidden;
+  border: 1px solid #888;
+  display: inline-block;
+  margin-bottom: 20px;
+  @include castShadow;
+
+  @media (min-width: $on-tablet) {
+    width: 300px;
+    -webkit-box-flex: .2;
+        -ms-flex-positive: .2;
+            flex-grow: .2;
+  }
+
+
+  &-copy {
+    color: #333;
+    margin-bottom: 0;}
+
+  div {
+    background-color: #FFF;
+    padding: 15px;}
+}
