@@ -52,12 +52,12 @@
     padding: 11px 12px;
     // width: 55px;
     // height: 80px;
-    // background-image: url('/Images/Interweaved.png');
+    // background-image: url('/images/Interweaved.png');
     background-size: auto 60px;
     background-position: center;
     background-repeat: no-repeat;
 
-    // &.disabled { background-image: url('/Images/Interweaved-Disabled.png');}
+    // &.disabled { background-image: url('/images/Interweaved-Disabled.png');}
 
     &.masthead-isActive {
       background-color: rgba($base-color, .18);}

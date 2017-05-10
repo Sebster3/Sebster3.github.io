@@ -28,7 +28,7 @@ var calcWrapperHeight = function(){
 <main class='listings'>
   {% for post in site.posts %}
     <a class='listing-link' href='{{ site.baseurl }}{{ post.url }}'>
-      <figure class='listing' style='background-image: url(/Images/Blog/{{ post.cardBackground }})'>
+      <figure class='listing' style='background-image: url(/images/blog/{{ post.cardBackground }})'>
         <h2 class='listing-title'>{{ post.title }}</h2>
         <div>
           <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
@@ -47,6 +47,6 @@ window.onresize = calcWrapperHeight;
 </script> -->
 </main>
 <style>
-.hero {background-image: url('{{ site.darkeningShim }}'), url('../Images/Sasha-Moody.jpg');}
+.hero {background-image: url('{{ site.darkeningShim }}'), url('../images/Sasha-Moody.jpg');}
 body { background-color: #DDDDDD;}
 </style>
