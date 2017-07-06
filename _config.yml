@@ -31,4 +31,4 @@ darkeningShim: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcS
 host: 0.0.0.0
 
 gems:
-  -jekyll-sitemap
+  - jekyll-sitemap
