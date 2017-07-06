@@ -1,0 +1,99 @@
+---
+---
+.goldenRatio {
+	width: 20em;
+	background-color: #eaeaea;
+	border-radius: 4px;
+	padding: 15px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: 15% auto;
+	// @include castShadow($fade: .1);
+	font-size: 18px;
+
+	&-field {
+		margin: 5px 0;
+		width: 10em;
+		font-size: 1em;
+		text-align: center;
+		border: 0;
+		height: 2.33em;
+		line-height: 2.33;
+
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button{
+			-webkit-appearance: none;
+			-moz-appearance: textfield;
+			margin: 0;
+		}
+
+		&--base,
+		&--truncate {
+			@extend .goldenRatio-field;
+			background-color: #FFF;
+			border-bottom: 2px solid #5a7bff;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				color: #ccc;
+				z-index: 4;}
+		}
+
+		&--base::before { content: 'Base';}
+
+		&--truncate {
+			margin-top: 40px;
+
+			&::before {
+				content: 'Accuracy';}
+		}
+	}
+}
+
+.--interval1 {
+	color: #777;
+	font-size: .9em;
+	height: 1.4em;
+	line-height: 1.4;
+	position: relative;}
+
+.--interval2 {
+	color: #AAA;
+	font-size: .75em;
+	height: .9em;
+	line-height: .9;
+	position: relative;}
+
+.--interval1:hover::before,
+.--interval2:hover::before {
+	position: absolute;
+	content: 'Set as Base';
+	background-color: #333;
+	font-size: 15px;
+	color: #FFF;
+	padding: 2px 9px;
+	border-radius: 3px;
+	right: -117px;
+	top: 0;
+	height: 20px;
+	line-height: 19px;
+	z-index: 2;
+}
+
+.--interval1:hover::after,
+.--interval2:hover::after {
+	content: '';
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	transform: rotate(45deg);
+	background-color: #333;
+	z-index: 1;
+	right: -23px;
+	top: 4px;
+}

@@ -29,22 +29,12 @@ var calcWrapperHeight = function(){
   {% for post in site.posts %}
     <a class='listing-link' href='{{ site.baseurl }}{{ post.url }}'>
       <figure class='listing' style='background-image: url(/images/blog/{{ post.cardBackground }})'>
-        <h2 class='listing-title'>{{ post.title }}</h2>
-        <div>
+        <h2 class='listing-title'>{{ post.title | smartify }}</h2>
           <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
           <p>{{ post.excerpt | truncatewords:25 }}</p>
-        </div>
       </figure>
     </a>
   {% endfor %}
-</main>
-<!-- <script type="text/javascript">
-var listings = document.getElementsByClassName('listing');
-var listingsWrapper = document.getElementsByClassName('listings');
-
-calcWrapperHeight();
-window.onresize = calcWrapperHeight;
-</script> -->
 </main>
 <style>
 .hero {background-image: url('{{ site.darkeningShim }}'), url('../images/Sasha-Moody.jpg');}

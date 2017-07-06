@@ -1,11 +1,14 @@
-$base-font-family: "Montserrat Web", Helvetica, Arial, sans-serif;
-$base-font-size: 15px;
+$base-font-size: 16px;
 $base-font-weight: 300;
+$base-line-height: 1.614;
 $ratio: 1.5;
 
 $text-color: #333333;
-$text-accent-color: #7F7F7F;
+$text-accent-color: #555;
 $background-color: #FDFDFD;
+
+// Post pages
+$post-text-padding: 15px;
 
 // Content area
 $content-width: 90%;

@@ -1,9 +1,9 @@
 <header class="masthead">
     <ul class="masthead-nav">
-        <a class="masthead-link{% if page.url contains 'Work' or page.url == '/work/' %} masthead-isActive{% endif %}" href='/work'>Work</a>
+        <a class="masthead-link{% if page.url contains 'work' or page.url == '/work/' %} masthead-isActive{% endif %}" href='/work'>Work</a>
         <!-- <a class="masthead-link disabled{% if page.url contains 'about' %} masthead-isActive{% endif %}" href="#">About</a> -->
         <a class="masthead-link masthead-link--logo{% if page.url == '/' %} masthead-isActive{% endif %}" href='/'><img height='60px' src='/images/Interweaved.png'></a>
-        <a class="masthead-link{% if page.url contains 'blog' or page.url == '/blog/' %} masthead-isActive{% endif %}" href='/blog'>Blog</a>
+        <a class="masthead-link disabled{% if page.url contains 'blog' or page.url == '/blog/' %} masthead-isActive{% endif %}">Blog</a>
         <!-- <a class="masthead-link disabled{% if page.url contains 'contact' %} masthead-isActive{% endif %}" href="#">Contact</a> -->
     </ul>
 </header>

@@ -54,58 +54,67 @@
 	src: local('Montserrat Black'),local('Montserrat-Black'),url(/fonts/montserrat-900.woff) format('woff')}
 
 html {
-    color: $text-color;
-    font-family: $base-font-family;
-    font-weight: $base-font-weight;
-    font-size: $base-font-size;
+	color: $text-color;
+	font-family: Georgia, serif;
+	font-weight: $base-font-weight;
+	font-size: $base-font-size;
 
-    @media (min-width: $on-tablet){ font-size: $base-font-size + 1;}
-    @media (min-width: $on-desktop){ font-size: $base-font-size + 2;}
-    @media (min-width: $on-desktop-l){ font-size: $base-font-size + 3;}
-    @media (min-width: $on-desktop-xl){ font-size: $base-font-size + 4;}
+	@media (min-width: $on-tablet){ font-size: $base-font-size + 1;}
+	@media (min-width: $on-desktop){ font-size: $base-font-size + 2;}
+	@media (min-width: $on-desktop-l){ font-size: $base-font-size + 3;}
+	@media (min-width: $on-desktop-xl){ font-size: $base-font-size + 4;}
 }
 
 h1 {
-    font-weight: 400;
-    font-size: 1.88em;
-    margin: 0 0 1rem;
-    text-align: center;
-    text-transform: uppercase;}
+	font-weight: 400;
+	// font-size: 1.88em;
+	font-size: (modularScale(1) + modularScale(2))/2;
+	font-family: "Montserrat Web", Helvetica, Arial, sans-serif;
+	margin: 0 0 1rem;
+	letter-spacing: .035em;
+	text-align: center;
+	text-transform: uppercase;}
 
 h2 {
-    font-size: 1.375em;
-    margin: 0 0 .85rem;
-    font-weight: 300;
-    text-align: center;}
+	// font-size: 1.375em;
+	font-size: modularScale(1);
+	font-family: "Montserrat Web", Helvetica, Arial, sans-serif;
+	margin: 0 0 .85rem;
+	font-weight: 300;
+	padding: 0 15px;
+	text-align: center;}
 
 h3 {
-	font-size: 1.25em;
+	// font-size: 1.25em;
+	font-size: modularScale(0);
+	font-family: "Montserrat Web", Helvetica, Arial, sans-serif;
 	margin: 0 0 .55rem;
-	font-weight: 400;
+	font-weight: 600;
+	letter-spacing: .025em;
 	text-transform: uppercase;}
 
 h4 {
-    text-align: center;
-    font-family: "Times New Roman", serif;
-    font-weight: 300;
-    font-style: italic;
-    color: $text-accent-color;
-    margin: 0 0 2.5125rem;}
+	text-align: center;
+	font-family: Georgia, serif;
+	font-weight: 300;
+	font-style: italic;
+	color: $text-accent-color;
+	margin: 0 0 1.8125rem;}
 
 p {
 	margin-top: 0;
-	letter-spacing: .2px;
-	line-height: 1.614rem;}
+	letter-spacing: -.0075em;
+	padding: 0 15px;
+	line-height: $base-line-height;}
 
 a,
 a:visited {
-    color: darken($base-color, 15%);
-    // transition: color ease-in-out .1s;
-    text-decoration: none;
-    cursor: pointer;}
+	color: darken($base-color, 15%);
+	text-decoration: none;
+	cursor: pointer;}
 
 a:hover {
-    color: $secondary-color;}
+	color: $secondary-color;}
 
 ::selection { background: rgba($secondary-color, .25);}
 ::-moz-selection { background: rgba($secondary-color, .25);}

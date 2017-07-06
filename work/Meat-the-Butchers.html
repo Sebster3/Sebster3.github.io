@@ -1,31 +1,67 @@
 ---
 layout: default
+title: SADM | Work | MTB
 ---
 {% include header.html %}
-<style>body {background: url('/images/work/MTB/Page-BG.jpg') no-repeat top center/ auto 400px;}</style>
-<main style='margin-top: 2em'>
-  <h1>Meat the Butchers</h1>
-  <div class="gallery-wrapper">
-    <h2 class='gallery-heading'>Recipe Cards</h2>
-    <div class='gallery'>
-      <img src='/images/work/MTB/Pesto-Chicken.jpg' alt='PMC Burger'>
-      <img src='/images/work/MTB/PMC-Burger.jpg' alt='Pesto Chicken Sandwich'>
-      <img src='/images/work/MTB/Sesame-Tuna.jpg' alt='Pesto Chicken Sandwich'>
-      <img src='/images/work/MTB/Satay.jpg' alt='Spicy Penut Chicken Satay Shots'>
-    </div>
-  </div>
-  <div class="gallery-wrapper">
-    <h2 class='gallery-heading'>Banners</h2>
-    <div class='gallery'>
-      <img src='/images/work/MTB/Picado-Loop.gif' alt='Cinco De Mayo Papel Picado'>
-      <img src='/images/work/MTB/Vegan-Free.jpg' alt='100% Vegan Free'>
-      <img src='/images/work/MTB/Presidents-Day.jpg' alt="President's Day">
-    </div>
-  </div>
-  <div class="gallery-wrapper">
-    <h2 class='gallery-heading'>POS Material</h2>
-    <div class='gallery'>
-      <img src='/images/work/MTB/POS-Inner.jpg'>
-    </div>
-  </div>
+<style>
+body { background-color: #F2F2F2;}
+.masthead { padding-bottom: 20px; background-color: #FFF; border-bottom: 1px solid #E7E7E7;}
+.slick { margin-top: 2rem;}
+.slick-slide { height: 200px; border: 1px solid #E7E7E7; background-color: #FFF; padding: 7px;}
+main {width: 90%; max-width: 1100px; margin-left: auto; margin-right: auto;}
+@media (min-width: 600px) {
+	.slick-slide { height: 300px; padding: 10px;}
+}
+@media (min-width: 900px) {
+	.slick-slide { height: 400px;}
+}
+</style>
+<div style='display: none;'>
+	<img src='/images/work/MTB/featured-1.jpg'>
+	<img src='/images/work/MTB/featured-2.jpg'>
+	<img src='/images/work/MTB/featured-3.jpg'>
+	<img src='/images/work/MTB/featured-4.jpg'>
+</div>
+<main style='margin-top: 2rem'>
+	<h1 class='work-title'>Meat the Butchers</h1>
+	<div class='cta' style='font-size: 21px; margin: 1.75rem 0 .5rem;'>
+		<a href="https://meatthebutchers.com" class='button'>visit the Site</a>
+	</div>
+	<div class='badges'>
+		<h4 class='badge'><img height='100' src='/images/Badge-Vector.svg' alt='Vector artwork badge'>Vector Art</h4>
+		<h4 class='badge'><img height='100' src='/images/Badge-Photography.svg' alt='Photography badge'>Photography</h4>
+		<h4 class='badge'><img height='100' src='/images/Badge-Development.svg' alt='Web development badge'>Web Dev</h4>
+	</div>
+	<div class='work-featured' style='background-image: url("/images/work/MTB/featured-1.jpg")'></div>
+	<div class='work-featured' style='background-image: url("/images/work/MTB/featured-2.jpg")'></div>
+	<img class='work-featured--wide' src='/images/work/MTB/Banner-Grilling-Season-Start.jpg' srcset='/images/work/MTB/Banner-Grilling-Season-Start.jpg 1x, /images/work/MTB/Banner-Grilling-Season-Start@2x.jpg 2x' alt='Lamb porterhouse chops on cutting block'>
 </main>
+<div class='slick'>
+	<img src='/images/work/MTB/Discount-Card-Wings.jpg' srcset='/images/work/MTB/Discount-Card-Wings.jpg 1x, /images/work/MTB/Discount-Card-Wings@2x.jpg 2x' alt='Paleo chicken drummets on rectangular plate'>
+	<img src='/images/work/MTB/IG-New-Year.jpg' srcset='/images/work/MTB/IG-New-Year.jpg 1x, /images/work/MTB/IG-New-Year@2x.jpg 2x' alt='Firework themed logo'>
+	<img src='/images/work/MTB/Recipe-Pesto.jpg' srcset='/images/work/MTB/Recipe-Pesto.jpg 1x, /images/work/MTB/Recipe-Pesto@2x.jpg 2x' alt='PMC Burger'>
+	<img src='/images/work/MTB/Meat-The-Book.jpg' srcset='/images/work/MTB/Meat-The-Book.jpg 1x, /images/work/MTB/Meat-The-Book@2x.jpg 2x'>
+	<img src='/images/work/MTB/Ad-Great-Grilling.jpg' srcset='/images/work/MTB/Ad-Great-Grilling.jpg 1x, /images/work/MTB/Ad-Great-Grilling@2x.jpg 2x'>
+	<img src='/images/work/MTB/POS-Inner.jpg' srcset='/images/work/MTB/POS-Inner.jpg 1x, /images/work/MTB/POS-Inner@2x.jpg 2x' alt='Packaging insert with various information'>
+	<img src='/images/work/MTB/Ad-4th.jpg' srcset='/images/work/MTB/Ad-4th.jpg 1x, /images/work/MTB/Ad-4th@2x.jpg 2x'>
+</div>
+<main style="margin-bottom: 2rem;">
+	<img class='work-featured--wide' src='/images/work/MTB/Banner-Plate.jpg' srcset='/images/work/MTB/Banner-Plate.jpg 1x, /images/work/MTB/Banner-Plate@2x.jpg 2x' alt='Lamb porterhouse chops on cutting block'>
+	<div class='work-featured' style='background-image: url("/images/work/MTB/featured-3.jpg")'></div>
+	<div class='work-featured' style='background-image: url("/images/work/MTB/featured-4.jpg")'></div>
+	<img class='work-featured--wide' src='/images/work/MTB/Banner-Picado.svg'>
+</main>
+<script>
+	$(document).ready(function(){
+		$('.slick').slick({
+			autoplaySpeed: 3500,
+			centerMode: true,
+			variableWidth: true,
+			infinite: false,
+			dots: true,
+			arrows: false,
+			slidesToShow: 1,
+			focusOnSelect: true
+		});
+	});
+	</script>

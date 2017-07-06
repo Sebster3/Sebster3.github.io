@@ -1,7 +1,7 @@
 ---
 layout: default
-addVue: true
 ---
+<link rel='stylesheet' href='/css/goldenRatio.css'>
 <div class='goldenRatio'>
   <h2>Golden Ratio Calculator</h2>
   <p class='goldenRatio-field --interval2' @click="makeBase(upperTwo,truncate)">&#123;&#123;upperTwo&#125;&#125;</p>
@@ -11,6 +11,7 @@ addVue: true
   <p class='goldenRatio-field --interval2' @click="makeBase(lowerTwo,truncate)">&#123;&#123;lowerTwo&#125;&#125;</p>
   <input v-model="truncate" type='text' pattern="[0-9]*" class='goldenRatio-field--truncate' min='0' @change="calcGR(truncate)">
 </div>
+<script type='text/javascript' src='/js/vue.min.js'></script>
 <script>
     GR = 1.61803;
 

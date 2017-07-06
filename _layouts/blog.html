@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body class='blog{% if page.customClass %} {{page.customClass}}{% endif %}'>
-        {{ content }}
-        {% include footer.html %}
-    </body>
+	{% include head.html %}
+	<body class='blog{% if page.customClass %} {{page.customClass}}{% endif %}'>
+		{{content}}
+	</body>
+	{% include footer-scripts.html %}
 </html>
