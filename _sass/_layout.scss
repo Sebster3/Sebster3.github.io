@@ -62,63 +62,41 @@
 		// height: 80px;
 		// background-image: url('/images/Interweaved.png');
 
-		// &.disabled { background-image: url('/images/Interweaved-Disabled.png');}
-
 		&.masthead-isActive { background-color: rgba($base-color, .18);}
 	}
 
 	img { vertical-align: middle;}
-
-	// &-link { color: $base-color;}
-
-	// &-link:nth-of-type(1) {
-	//   color: $base-color;}
-
-	// &-link:nth-of-type(2) {
-	//   color: $gradient-left;}
-
-	// &-link:nth-of-type(4) {
-	//   color: $gradient-right;}
-
-	// &-link:nth-of-type(5) {
-	// color: $secondary-color;}
 }// END .masthead
 
-.button {
-	border-radius: 4px;
+%button {
 	border: 2px solid transparent;
-	background-color: $base-color;
-	color: #FFF;
+	border-radius: 4px;
 	padding: 4px 12px;
 	line-height: 2em;
-
-	&:visited { color: #FFF;}
 
 	&:hover {
 		background-color: $secondary-color;
 		border-color: darken($secondary-color, 15%);
-	}
+		color: #FFF;}
 
 	&:nth-last-child(n+2) { margin-right: .75rem;}
+}// END %button
+
+.button {
+	@extend %button;
+	background-color: $base-color;
+	color: #FFF;
+
+	&:visited { color: #FFF;}
 }// END .button
 
 .button--hollow {
-	border-radius: 4px;
-	border: 2px solid darken($base-color, 10%);
+	@extend %button;
+	border-color: $base-color;
 	background-color: #FFF;
 	color: darken($base-color, 10%);
-	padding: 4px 12px;
-	line-height: 2em;
 
 	&:visited { color: $base-color;}
-
-	&:hover {
-		color: #FFF;
-		background-color: $secondary-color;
-		border-color: darken($secondary-color, 15%);
-	}
-
-	&:nth-last-child(n+2) { margin-right: .75rem;}
 }// END .button--hollow
 
 .cta {
@@ -165,38 +143,42 @@
 .hidden {
 	opacity: 0;}
 
+%work-featured {
+	border: 7px solid #FFF;
+	outline: 1px solid #EAEAEA;
+	margin: 0;
+	clear: both;
+	@media (min-width: $on-tablet){ border-width: 10px;}
+}// END %work-featured
+
 .work{
 	&-title { margin: 0;}
 
 	&-featured {
+		@extend %work-featured;
 		height: 35vh;
 		background-size: cover;
 		background-position: center;
-		border: 7px solid #FFF;
-		outline: 1px solid #EAEAEA;
-		margin: 0;
-		clear: both;
-		@media (min-width: $on-tablet){
-			border-width: 10px;
+
+		&--wide {
+			@extend %work-featured;
+			width: 100%;
+			float: left;
+
+			&:last-child { margin-bottom: 2rem;}
+		}
+	}
+
+	@media (min-width: $on-tablet){
+		&-featured {
 			float: left;
 			clear: none;
 			width: 50%;
 			height: 25vh;
 			min-height: 225px;}
-		@media (min-width: $on-desktop){ min-height: 290px;}
-		@media (min-width: $on-desktop-l){ min-height: 320px;}
-
-		&--wide {
-			border: 10px solid #FFF;
-			outline: 1px solid #EAEAEA;
-			width: 100%;
-			margin: 0;
-			float: left;
-			clear: both;
-
-			&:last-child { margin-bottom: 2rem;}
-		}
 	}
+	@media (min-width: $on-desktop){ &-featured { min-height: 290px;}}
+	@media (min-width: $on-desktop-l){ &-featured { min-height: 320px;}}
 }// END .work
 
 .card {
@@ -209,12 +191,6 @@
 	margin-bottom: 20px;
 	width: 100%;
 	@include castShadow;
-	@media (min-width: $on-tablet) {
-		width: 300px;
-		max-width: 450px;
-		-webkit-box-flex: .2;
-		-ms-flex-positive: .2;
-		flex-grow: .2;}
 
 	&s {
 		@extend %main-wrapper-styles;
@@ -244,9 +220,16 @@
 		background-color: #F2F2F2;
 		padding: .35rem 0 .6rem;}
 
-	.badge {
-		margin: .25rem .5rem;
-		@media (min-width: $on-tablet){
+	.badge { margin: .25rem .5rem;}
+	
+	@media (min-width: $on-tablet) {
+		width: 300px;
+		max-width: 450px;
+		-webkit-box-flex: .2;
+		-ms-flex-positive: .2;
+		flex-grow: .2;
+
+		.badge {
 			text-align: center;
 			font-size: .8em;}
 	}
@@ -256,24 +239,26 @@
 	text-align: left;
 	margin: 1rem;
 	font-size: 1.2rem;
-	@media (min-width: $on-tablet){
-		text-align: center;
-		font-size: 1rem;}
 
 	&s {// .badges
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
-		justify-content: center;
-		@media (min-width: $on-tablet){
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;}
-	}
+		justify-content: center;}
 
 	img {
 		vertical-align: middle;
-		padding-right: 1rem;
-		@media (min-width: $on-tablet){
+		padding-right: 1rem;}
+	
+	@media (min-width: $on-tablet){
+		text-align: center;
+		font-size: 1rem;
+
+		&s {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;}
+
+		img {
 			display: block;
 			padding: 0;
 			margin: 0 auto;}
@@ -337,43 +322,21 @@
 	margin-bottom: 55px;
 	border-radius: $border-radius;
 	@include castShadow($fade: .1);
-	@media (min-width: $on-tablet){
-		max-width: 650px;
-		padding: 1em 15px 15px;}
-	@media (min-width: $on-desktop){
-		max-width: 710px;
-		padding: 1em 30px 30px;}
-	@media (min-width: $on-desktop-l){ max-width: 760px;}
 
-	p {
-		padding: 0 $post-text-padding;
-		@media (min-width: $on-tablet){
-			padding: 0 ($post-text-padding + 5);}
-	}
+	p { padding: 0 $post-text-padding;}
 
 	img { width: 100%;}
 
 	&-return {
 		margin: 0 0 1em;
-		padding: 0;
-		@media (min-width: $on-tablet){
-			margin-bottom: 1em;}
-	}
+		padding: 0;}
 
 	&-title {
 		padding: 0 $post-text-padding;
 		margin-bottom: .5rem;
-		margin-top: -16px;
-		@media (min-width: $on-tablet){
-			margin-top: -23px;
-			padding: 0 ($post-text-padding + 5);}
-	}
+		margin-top: -16px;}
 
-	&-subtitle {
-		padding: 0 $post-text-padding;
-		@media (min-width: $on-tablet){
-			padding: 0 ($post-text-padding + 5);}
-	}
+	&-subtitle { padding: 0 $post-text-padding;}
 
 	&-img {
 		width: 100%;
@@ -381,19 +344,32 @@
 		overflow: hidden;
 		background-color: #EEE;
 		margin: 1.75em 0;
-		@media (min-width: $on-tablet){
-			border-radius: 5px;
-			// width: 110%;
-			// left: -5%;
-			// @include castShadow($length: 1.1, $fade: .1);
-		}
-
-		// @media (min-width: $on-desktop){ width: 115%; left: -7.5%;}
 
 		&:last-child { padding-bottom: 0;}
 
 		p { margin: 0.1em 0 0.4em;}
 	}
+	
+	@media (min-width: $on-tablet){
+		max-width: 650px;
+		padding: 1em 15px 15px;
+
+		p { padding: 0 ($post-text-padding + 5);}
+
+		&-return { margin-bottom: 1em;}
+
+		&-title {
+			margin-top: -23px;
+			padding: 0 ($post-text-padding + 5);}
+
+		&-subtitle { padding: 0 ($post-text-padding + 5);}
+
+		&-img { border-radius: 5px;}
+	}
+	@media (min-width: $on-desktop){
+		max-width: 710px;
+		padding: 1em 30px 30px;}
+	@media (min-width: $on-desktop-l){ max-width: 760px;}
 }// END .post
 
 // .tag {
