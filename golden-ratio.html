@@ -3,41 +3,43 @@ layout: default
 ---
 <link rel='stylesheet' href='/css/goldenRatio.css'>
 <div class='goldenRatio'>
-  <h2>Golden Ratio Calculator</h2>
-  <p class='goldenRatio-field --interval2' @click="makeBase(upperTwo,truncate)">&#123;&#123;upperTwo&#125;&#125;</p>
-  <p class='goldenRatio-field --interval1' @click="makeBase(upperOne,truncate)">&#123;&#123;upperOne&#125;&#125;</p>
-  <input v-model="base" type='text' pattern="[0-9]*" class='goldenRatio-field--base' placeholder='Base' @change="calcGR(truncate)">
-  <p class='goldenRatio-field --interval1' @click="makeBase(lowerOne,truncate)">&#123;&#123;lowerOne&#125;&#125;</p>
-  <p class='goldenRatio-field --interval2' @click="makeBase(lowerTwo,truncate)">&#123;&#123;lowerTwo&#125;&#125;</p>
-  <input v-model="truncate" type='text' pattern="[0-9]*" class='goldenRatio-field--truncate' min='0' @change="calcGR(truncate)">
+	<h2>Golden Ratio Calculator</h2>
+	<p class='goldenRatio-field --interval2' @click="makeBase(upperTwo,truncate)">&#123;&#123;upperTwo&#125;&#125;</p>
+	<p class='goldenRatio-field --interval1' @click="makeBase(upperOne,truncate)">&#123;&#123;upperOne&#125;&#125;</p>
+	<input v-model="base" type='text' pattern="[0-9]*" class='goldenRatio-field--base' placeholder='Base' @change="calcGR(truncate)">
+	<p class='goldenRatio-field --interval1' @click="makeBase(lowerOne,truncate)">&#123;&#123;lowerOne&#125;&#125;</p>
+	<p class='goldenRatio-field --interval2' @click="makeBase(lowerTwo,truncate)">&#123;&#123;lowerTwo&#125;&#125;</p>
+	<input v-model="truncate" type='text' pattern="[0-9]*" class='goldenRatio-field--truncate' min='0' @change="calcGR(truncate)">
 </div>
-<script type='text/javascript' src='/js/vue.min.js'></script>
-<script>
-    GR = 1.61803;
 
-    var GRCalc = new Vue({
-      el: '.goldenRatio',
-      data: {
-        base: 0,
-        upperOne: 0,
-        upperTwo: 0,
-        lowerOne: 0,
-        lowerTwo: 0,
-        truncate: 2
-      },
-      methods: {
-        calcGR: function (truncateTo) {
-          this.base = this.base.toString();
-          this.base = this.base.replace(/[^\d\.]/gi,'');
-          this.upperOne = (this.base * GR).toFixed(truncateTo);
-          this.upperTwo = (this.base * GR * GR).toFixed(truncateTo);
-          this.lowerOne = (this.base / GR).toFixed(truncateTo);
-          this.lowerTwo = (this.base / GR / GR).toFixed(truncateTo);
-        },
-        makeBase: function(newBase, truncateTo){
-          this.base = newBase;
-          this.calcGR(truncateTo);
-        }
-      }
-    });
-  </script>
+<script type='text/javascript' src='/js/vue.min.js'></script>
+
+<script>
+GR = 1.61803;
+
+var GRCalc = new Vue({
+	el: '.goldenRatio',
+	data: {
+		base: 0,
+		upperOne: 0,
+		upperTwo: 0,
+		lowerOne: 0,
+		lowerTwo: 0,
+		truncate: 2
+	},
+	methods: {
+		calcGR: function (truncateTo) {
+			this.base = this.base.toString();
+			this.base = this.base.replace(/[^\d\.]/gi,'');
+			this.upperOne = (this.base * GR).toFixed(truncateTo);
+			this.upperTwo = (this.base * GR * GR).toFixed(truncateTo);
+			this.lowerOne = (this.base / GR).toFixed(truncateTo);
+			this.lowerTwo = (this.base / GR / GR).toFixed(truncateTo);
+		},
+		makeBase: function(newBase, truncateTo){
+			this.base = newBase;
+			this.calcGR(truncateTo);
+		}
+	}
+});
+</script>

@@ -73,7 +73,10 @@ h1 {
 	margin: 0 0 1rem;
 	letter-spacing: .035em;
 	text-align: center;
-	text-transform: uppercase;}
+	text-transform: uppercase;
+	background: -webkit-linear-gradient(90deg, #0a2cb4, #bf00e6 83%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;}
 
 h2 {
 	// font-size: 1.375em;

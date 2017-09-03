@@ -24,6 +24,10 @@ var calcWrapperHeight = function(){
 };
 
 </script>
+<div style='display: none; visibility: hidden; opacity: 0;'>
+	<!-- For loading images used as backgrounds in render order-->
+	<img src='/images/Shim.png'>
+</div>
 {% include header-hero.html %}
 <main class='listings'>
   {% for post in site.posts %}
@@ -37,6 +41,6 @@ var calcWrapperHeight = function(){
   {% endfor %}
 </main>
 <style>
-.hero {background-image: url('{{ site.darkeningShim }}'), url('../images/Sasha-Moody.jpg');}
+.hero {background-image: url('../images/Sasha-Moody.jpg');}
 body { background-color: #DDDDDD;}
 </style>

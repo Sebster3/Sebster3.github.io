@@ -1,9 +1,19 @@
-<header class="masthead">
-    <ul class="masthead-nav">
-        <a class="masthead-link{% if page.url contains 'work' or page.url == '/work/' %} masthead-isActive{% endif %}" href='/work'>Work</a>
-        <!-- <a class="masthead-link disabled{% if page.url contains 'about' %} masthead-isActive{% endif %}" href="#">About</a> -->
-        <a class="masthead-link masthead-link--logo{% if page.url == '/' %} masthead-isActive{% endif %}" href='/'><img height='60px' src='/images/Interweaved.png'></a>
-        <a class="masthead-link disabled{% if page.url contains 'blog' or page.url == '/blog/' %} masthead-isActive{% endif %}">Blog</a>
-        <!-- <a class="masthead-link disabled{% if page.url contains 'contact' %} masthead-isActive{% endif %}" href="#">Contact</a> -->
-    </ul>
+<header class="masthead{% if page.mastheadClass %} {{page.mastheadClass}}{% endif %}">
+	<ul class="masthead-nav">
+		<a class="masthead-link{% if page.url contains 'work' or page.url == '/work/' %} masthead-isActive{% endif %}" href='/work'>Work</a>
+		<!-- <a class="masthead-link disabled{% if page.url contains 'about' %} masthead-isActive{% endif %}" href="#">About</a> -->
+		<a class="masthead-link masthead-link--logo{% if page.url == '/' %} masthead-isActive{% endif %}" href='/'><img height='60px' src='/images/Interweaved.png'></a>
+		<a class="masthead-link disabled{% if page.url contains 'blog' or page.url == '/blog/' %} masthead-isActive{% endif %}">Blog</a>
+		<!-- <a class="masthead-link disabled{% if page.url contains 'contact' %} masthead-isActive{% endif %}" href="#">Contact</a> -->
+	</ul>
 </header>
+{% if page.mastheadClass == "colorbar" %}
+<div class="masthead-colorbar" style=" height: 2px; background-image: linear-gradient(90deg, #6b90ff, #dc33ff);"></div>
+<style>
+	html {
+		min-height: 100%;
+		background-color: #F5F5F5;
+		/*background: linear-gradient(168deg, hsla(236, 100%,90%, 1), transparent 20%) no-repeat top left/ 67% 100vh, linear-gradient(192deg, hsl(288, 100%, 90%), transparent 20%) no-repeat top right/ 67% 100vh;*/
+	}
+</style>
+{% endif %}

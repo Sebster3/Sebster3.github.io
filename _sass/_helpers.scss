@@ -23,8 +23,8 @@ $ratio: 1.5; // Perfect Fifth
 
 @mixin castShadow($length: .6, $fade: .1){
 	box-shadow: 0 (4px * $length) (4px * $length) rgba(0, 0, 0, $fade),
-							0 (8px * $length) (8px * $length) rgba(0, 0, 0, $fade),
-							0 (16px * $length) (16px * $length) rgba(0, 0, 0, $fade);
+					0 (8px * $length) (8px * $length) rgba(0, 0, 0, $fade),
+					0 (16px * $length) (16px * $length) rgba(0, 0, 0, $fade);
 }
 
 @mixin columns($count: 2, $gap: 1rem, $width: 350px){
@@ -43,6 +43,43 @@ $ratio: 1.5; // Perfect Fifth
 	-webkit-column-break-inside: $type;
 	page-break-inside: $type;
 	break-inside: $type;
+}
+
+@mixin easeGradientTransparentAtBottom($color, $topOpacity){
+	background: linear-gradient(
+		rgba($color, ($topOpacity * 1)) 0%,
+		rgba($color, ($topOpacity * .978)) 9.5%,
+		rgba($color, ($topOpacity * .925)) 17.7%,
+		rgba($color, ($topOpacity * .857)) 24.7%,
+		rgba($color, ($topOpacity * .781)) 31%,
+		rgba($color, ($topOpacity * .701)) 36.8%,
+		rgba($color, ($topOpacity * .62)) 42.3%,
+		rgba($color, ($topOpacity * .538)) 47.6%,
+		rgba($color, ($topOpacity * .455)) 52.9%,
+		rgba($color, ($topOpacity * .373)) 58.2%,
+		rgba($color, ($topOpacity * .291)) 63.7%,
+		rgba($color, ($topOpacity * .212)) 69.5%,
+		rgba($color, ($topOpacity * .138)) 75.8%,
+		rgba($color, ($topOpacity * .07)) 82.9%,
+		rgba($color, ($topOpacity * .019)) 91.2%,
+		rgba($color, ($topOpacity * 0)) 100%);
+	background: -webkit-linear-gradient(
+		rgba($color, ($topOpacity * 1)) 0%,
+		rgba($color, ($topOpacity * .978)) 9.5%,
+		rgba($color, ($topOpacity * .925)) 17.7%,
+		rgba($color, ($topOpacity * .857)) 24.7%,
+		rgba($color, ($topOpacity * .781)) 31%,
+		rgba($color, ($topOpacity * .701)) 36.8%,
+		rgba($color, ($topOpacity * .62)) 42.3%,
+		rgba($color, ($topOpacity * .538)) 47.6%,
+		rgba($color, ($topOpacity * .455)) 52.9%,
+		rgba($color, ($topOpacity * .373)) 58.2%,
+		rgba($color, ($topOpacity * .291)) 63.7%,
+		rgba($color, ($topOpacity * .212)) 69.5%,
+		rgba($color, ($topOpacity * .138)) 75.8%,
+		rgba($color, ($topOpacity * .07)) 82.9%,
+		rgba($color, ($topOpacity * .019)) 91.2%,
+		rgba($color, ($topOpacity * 0)) 100%);
 }
 
 
