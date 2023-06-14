@@ -1,0 +1,15 @@
+{{ $url := .url }}
+{{ $alt := .alt }}
+{{ $shouldDownscale := .downscale }}
+
+{{ with (resources.GetMatch $url) }}
+    {{ if $shouldDownscale }}
+        {{ $smallImage := .Resize (printf "%dx q85" (div .Width 2)) }}
+        <img class="featured-banner" src="{{ .RelPermalink }}" srcset="{{ $smallImage.RelPermalink }} 1x, {{ .RelPermalink }} 2x" {{ with $alt -}} alt="{{ . }}" {{- end }}>
+    {{ else }}
+        <img class="featured-banner" src="{{ .RelPermalink }}" {{ with $alt -}} alt="{{ . }}" {{- end }}>
+    {{ end }}
+{{ else }}
+    {{ $notFoundImage := resources.GetMatch "/images/ImageNotFound.svg" }}
+    <img class="featured-banner" src="{{ $notFoundImage.RelPermalink }}" height="225px" alt="Image not found">
+{{ end }}

@@ -1,0 +1,44 @@
+// $base-font-size: 16px;
+// $base-font-weight: 300;
+// $base-line-height: 1.614;
+$ratio: 1.5;
+
+// $text-color: #333333;
+// $text-accent-color: #555;
+$background-color: #FDFDFD;
+
+// Post pages
+$post-text-padding: 15px;
+
+// Content area
+$content-width: 90%;
+$content-max-width: 760px;
+
+// Common border radius
+$border-radius: 5px;
+
+// Media query sizes
+$on-tablet: 600px;
+$on-desktop: 900px;
+$on-desktop-l: 1200px;
+$on-desktop-xl: 1800px;
+
+// Gradient colors
+$base-color: #5A7BFF;
+$gradient-left: #9270FF;
+$gradient-right: #B752FF;
+$secondary-color: #DD33FF;
+
+
+$header-opacity-fade: .5;
+
+:root {
+    --base-main-font-family: Georgia, serif;
+    --base-accent-font-family: "Montserrat Web", Helvetica, Arial, sans-serif;
+    --base-font-size: 16px;
+    --base-font-weight: 300;
+    --base-line-height: 1.614;
+
+    --base-text-color: #333333;
+    --base-text-accent-color: #555555;
+}

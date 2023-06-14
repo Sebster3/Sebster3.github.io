@@ -1,0 +1,17 @@
+{{ with . }}
+<a href="{{ .RelPermalink}}">
+    <div class="listing">
+        <h3 class="title">{{ .Title }}</h3>
+        {{ with .Params.dateString -}}
+            <h4 class="dateline">{{ . }}</h4>
+        {{- end }}
+        {{ with .Params.tags }}
+            <div class="tags">
+                {{ range . }}
+                    <p class="tag {{ . }}">{{ . }}</p>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</a>
+{{ end }}

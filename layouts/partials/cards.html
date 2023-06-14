@@ -1,0 +1,12 @@
+<a href="{{.Permalink}}">
+    {{ with resources.GetMatch .Params.cardBg }}
+        <div class="card" style="background-image: url({{- .RelPermalink -}}),url({{- .RelPermalink -}})">
+    {{ else }}
+        <div class="card" style="background-color: red">
+    {{ end }}
+        {{/*  <h2 class='card-title'>{{ .Title }}</h2>  */}}
+        {{ with .Params.badges }}
+            {{ partial "badges.html" . }}
+        {{ end }}
+    </div>
+</a>
