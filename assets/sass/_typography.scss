@@ -1,0 +1,156 @@
+// TODO: Add Dyslexie font
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Montserrat Thin'), local('Montserrat-Thin'), url(/fonts/montserrat-100.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 200;
+	src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), local('Montserrat UltraLight'), local('Montserrat-UltraLight'), url(/fonts/montserrat-200.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Montserrat Light'), local('Montserrat-Light'), url(/fonts/montserrat-300.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat Regular'), local('Montserrat-Regular'), url(/fonts/montserrat-400.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Montserrat Medium'), local('Montserrat-Medium'), url(/fonts/montserrat-500.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Montserrat SemiBold'), local('Montserrat Semi Bold'), local('Montserrat-SemiBold'), url(/fonts/montserrat-600.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Montserrat Bold'), local('Montserrat-Bold'), url(/fonts/montserrat-700.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), local('Montserrat Extra Bold'), url(/fonts/montserrat-800.woff) format('woff')
+}
+
+@font-face {
+	font-family: 'Montserrat Web';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Montserrat Black'), local('Montserrat-Black'), url(/fonts/montserrat-900.woff) format('woff')
+}
+
+body {
+	color: var(--base-text-color);
+	font-family: var(--base-main-font-family);
+	font-weight: var(--base-font-weight);
+	font-size: var(--base-font-size);
+
+	@media (min-width: $on-tablet) {
+		font-size:  calc(var(--base-font-size) + 1px);
+	}
+
+	@media (min-width: $on-desktop) {
+		font-size:  calc(var(--base-font-size) + 2px);
+	}
+
+	@media (min-width: $on-desktop-l) {
+		font-size:  calc(var(--base-font-size) + 3px);
+	}
+
+	@media (min-width: $on-desktop-xl) {
+		font-size:  calc(var(--base-font-size) + 4px);
+	}
+}
+
+h1 {
+	font-weight: 400;
+	font-size: (modularScale(1) + modularScale(2)) / 2.25;
+	font-family: var(--base-accent-font-family);
+	margin: 0 0 1rem;
+	letter-spacing: .035em;
+	text-align: center;
+	text-transform: uppercase;
+	background: -webkit-linear-gradient(90deg, #0a2cb4, #bf00e6 83%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2 {
+	font-size: modularScale(1);
+	font-family: var(--base-accent-font-family);
+	margin: 0 0 .85rem;
+	font-weight: 300;
+	padding: 0 15px;
+	text-align: center;
+}
+
+h3 {
+	font-size: modularScale(0);
+	font-family: var(--base-accent-font-family);
+	margin: 0 0 .55rem;
+	font-weight: 600;
+	letter-spacing: .025em;
+	text-transform: uppercase;
+}
+
+h4 {
+	text-align: center;
+	font-weight: var(--base-font-weight);
+	font-size: modularScale(0);
+	font-style: italic;
+	color: var(--base-text-accent-color);
+	margin: 0 0 1.8125rem;
+}
+
+p {
+	margin-top: 0;
+	letter-spacing: -.0075em;
+	padding: 0;
+	line-height: var(--base-line-height);
+}
+
+a,
+a:visited {
+	color: darken($base-color, 15%);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: $secondary-color;
+}
+
+::selection {
+	background: rgba($secondary-color, .25);
+}
+
+::-moz-selection {
+	background: rgba($secondary-color, .25);
+}
+
+#dateline {
+	margin: 0;
+}

@@ -1,0 +1,102 @@
+// MIXINS
+
+// 1. Base size and ratio
+$base: 1.125rem;
+$ratio: 1.5; // Perfect Fourth
+
+// 2. The formula for modular scale is (ratio^value)*base so we need a power function
+@function pow($number, $exponent) {
+	$value: 1;
+	@if $exponent > 0 {
+		@for $i from 1 through $exponent {
+			$value: $value * $number;
+		}
+	}
+	@if $exponent < 0 {
+		@for $i from 1 through $exponent {
+			$value: $value * $number;
+		}
+		$value: 1 / $value;
+	}
+	@return $value;
+}
+
+// 3. Let's make it simpler to use by combining everything under one roof
+@function modularScale($value, $ms-ratio: $ratio, $ms-base: $base){
+	$size: pow($ms-ratio, $value)*$ms-base;
+	@return $size;}
+
+
+@mixin castShadow($length: .6, $fade: .1){
+	box-shadow: 0 (4px * $length) (4px * $length) rgba(0, 0, 0, $fade),
+					0 (8px * $length) (8px * $length) rgba(0, 0, 0, $fade),
+					0 (16px * $length) (16px * $length) rgba(0, 0, 0, $fade);
+}
+
+@mixin columns($count: 2, $gap: 1rem, $width: 350px){
+	-webkit-column-count: $count;
+	-moz-column-count: $count;
+	column-count: $count;
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	column-gap: $gap;
+	-webkit-column-width: $width;
+	-moz-column-width: $width;
+	column-width: $width;
+}
+
+@mixin breakInside($type: avoid){
+	-webkit-column-break-inside: $type;
+	page-break-inside: $type;
+	break-inside: $type;
+}
+
+@mixin easeGradientTransparentAtBottom($color, $topOpacity){
+	background: linear-gradient(
+		rgba($color, ($topOpacity * 1)) 0%,
+		rgba($color, ($topOpacity * .978)) 9.5%,
+		rgba($color, ($topOpacity * .925)) 17.7%,
+		rgba($color, ($topOpacity * .857)) 24.7%,
+		rgba($color, ($topOpacity * .781)) 31%,
+		rgba($color, ($topOpacity * .701)) 36.8%,
+		rgba($color, ($topOpacity * .62)) 42.3%,
+		rgba($color, ($topOpacity * .538)) 47.6%,
+		rgba($color, ($topOpacity * .455)) 52.9%,
+		rgba($color, ($topOpacity * .373)) 58.2%,
+		rgba($color, ($topOpacity * .291)) 63.7%,
+		rgba($color, ($topOpacity * .212)) 69.5%,
+		rgba($color, ($topOpacity * .138)) 75.8%,
+		rgba($color, ($topOpacity * .07)) 82.9%,
+		rgba($color, ($topOpacity * .019)) 91.2%,
+		rgba($color, ($topOpacity * 0)) 100%);
+	background: -webkit-linear-gradient(
+		rgba($color, ($topOpacity * 1)) 0%,
+		rgba($color, ($topOpacity * .978)) 9.5%,
+		rgba($color, ($topOpacity * .925)) 17.7%,
+		rgba($color, ($topOpacity * .857)) 24.7%,
+		rgba($color, ($topOpacity * .781)) 31%,
+		rgba($color, ($topOpacity * .701)) 36.8%,
+		rgba($color, ($topOpacity * .62)) 42.3%,
+		rgba($color, ($topOpacity * .538)) 47.6%,
+		rgba($color, ($topOpacity * .455)) 52.9%,
+		rgba($color, ($topOpacity * .373)) 58.2%,
+		rgba($color, ($topOpacity * .291)) 63.7%,
+		rgba($color, ($topOpacity * .212)) 69.5%,
+		rgba($color, ($topOpacity * .138)) 75.8%,
+		rgba($color, ($topOpacity * .07)) 82.9%,
+		rgba($color, ($topOpacity * .019)) 91.2%,
+		rgba($color, ($topOpacity * 0)) 100%);
+}
+
+
+// PLACEHOLDERS
+%main-wrapper-styles {
+	width: $content-width;
+	max-width: $content-max-width;
+	margin: 0 auto;
+}
+
+%top-offset-wrapper-styles {
+	@extend %main-wrapper-styles;
+	margin: -55px auto 0;
+}
