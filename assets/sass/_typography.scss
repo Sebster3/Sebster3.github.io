@@ -87,7 +87,7 @@ body {
 
 h1 {
 	font-weight: 400;
-	font-size: (modularScale(1) + modularScale(2)) / 2.25;
+	font-size: calc((modularScale(1) + modularScale(2)) / 2.25);
 	font-family: var(--base-accent-font-family);
 	margin: 0 0 1rem;
 	letter-spacing: .035em;
