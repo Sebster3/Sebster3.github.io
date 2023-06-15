@@ -5,8 +5,6 @@ tags:
 categories: work
 title: "Premier Meat Company"
 dateString: "September, 2015 – June, 2017"
-cardId: "card-pmc"
-cardBg: "/images/work/pmc/card-bg.jpg"
 # ctaLinks:
 #   - url: https://premiermeatcompany.com/
 #     text: Visit the Site

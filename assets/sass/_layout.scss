@@ -353,63 +353,6 @@ html {
 	}
 } // END .work-page 
 
-.card {
-	padding: 100px 0 5px;
-	background: no-repeat top center/auto 100px, no-repeat 50% 102%/auto 100px;
-	border-radius: $border-radius;
-	overflow: hidden;
-	border: 1px solid #888;
-	display: inline-block;
-	width: 100%;
-	@include castShadow;
-
-	.wrapper {
-		@extend %main-wrapper-styles;
-	}
-
-	&s {
-		@extend %main-wrapper-styles;
-		max-width: 1000px;
-		margin-top: 2em;
-		display: flex;
-		align-items: flex-start;
-		flex-flow: row wrap;
-		justify-content: space-around;
-
-		>a {
-			// margin-bottom: 20px;
-			margin: 0 .75rem 1rem;
-		}
-	}
-
-	&-title {
-		background-color: #FFF;
-		line-height: 2.5rem;
-		border-bottom: 1px solid #E7E7E7;
-		margin: 0;
-		padding: .5rem 15px;
-		letter-spacing: -.015em;
-	}
-
-	.badges {
-		background-color: #F5F5F5;
-		padding: .35rem 0 .6rem;
-	}
-
-	.badge {
-		margin: .25rem .5rem;
-	}
-
-	@media (min-width: $on-tablet) {
-		width: 375px;
-
-		.badge {
-			text-align: center;
-			font-size: .8em;
-		}
-	}
-} // END .card
-
 .badges {
 	display: flex;
 	flex-flow: wrap;

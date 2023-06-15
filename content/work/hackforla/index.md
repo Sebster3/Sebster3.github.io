@@ -5,8 +5,6 @@ tags:
   - javascript
 title: "Hack For LA"
 dateString: "February, 2023 – Current"
-cardId: "card-hfla"
-cardBg: "/images/work/hfla/card-bg.jpg"
 # ctaLinks:
 #   - url: https://meatthebutchers.com/
 #     text: Visit the Site
