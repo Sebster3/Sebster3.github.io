@@ -68,7 +68,7 @@ html {
 		justify-content: center;
 		margin: 0 auto;
 		list-style: none;
-		max-width: $content-max-width;
+		max-width: var(--content-max-width);
 		height: 64px;
 		width: 100%;
 		padding: 0;
@@ -81,7 +81,7 @@ html {
 	&-link {
 		a {
 			border: 2px solid transparent;
-			font-family: var(--base-accent-font-family);
+			font-family: var(--accent-font-family);
 			border-radius: 8px;
 			box-sizing: border-box;
 			color: scale-color($base-color, $lightness: -25%);
@@ -301,8 +301,8 @@ html {
 
 
 .featured-wrapper {
-	width: 90%;
-	max-width: 1100px;
+	width: var(--content-width);
+	max-width: var(--content-max-width);
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
@@ -356,7 +356,7 @@ html {
 .card {
 	padding: 100px 0 5px;
 	background: no-repeat top center/auto 100px, no-repeat 50% 102%/auto 100px;
-	border-radius: $border-radius;
+	border-radius: var(--base-border-radius);
 	overflow: hidden;
 	border: 1px solid #888;
 	display: inline-block;
@@ -515,11 +515,11 @@ html {
 	background-color: #FFFFFF;
 	position: relative;
 	margin-bottom: 55px;
-	border-radius: $border-radius;
+	border-radius: var(--base-border-radius);
 	@include castShadow($fade: .1);
 
 	p {
-		padding: 0 $post-text-padding;
+		padding: 0 var(--base-padding-side);
 	}
 
 	img {
@@ -532,13 +532,13 @@ html {
 	}
 
 	&-title {
-		padding: 0 $post-text-padding;
+		padding: 0 var(--base-padding-side);
 		margin-bottom: .5rem;
 		margin-top: -16px;
 	}
 
 	&-subtitle {
-		padding: 0 $post-text-padding;
+		padding: 0 var(--base-padding-side);
 	}
 
 	&-img {
@@ -562,7 +562,7 @@ html {
 		padding: 1em 15px 15px;
 
 		p {
-			padding: 0 ($post-text-padding + 5);
+			padding: 0 (var(--base-padding-side) + 5);
 		}
 
 		&-return {
@@ -571,11 +571,11 @@ html {
 
 		&-title {
 			margin-top: -23px;
-			padding: 0 ($post-text-padding + 5);
+			padding: 0 (var(--base-padding-side) + 5);
 		}
 
 		&-subtitle {
-			padding: 0 ($post-text-padding + 5);
+			padding: 0 (var(--base-padding-side) + 5);
 		}
 
 		&-img {
@@ -661,8 +661,8 @@ html {
 
 .gallery-page {
 	section {
-		width: 90%;
-		max-width: 1100px;
+		width: var(--content-width);
+		max-width: var(--content-max-width);
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -770,7 +770,7 @@ html {
 	margin-bottom: .25em;
 	line-height: 1.614;
 	overflow: hidden;
-	font-family: var(--base-accent-font-family);
+	font-family: var(--accent-font-family);
 	font-weight: 400;
 	font-size: 0.75rem;
 	opacity: .75;

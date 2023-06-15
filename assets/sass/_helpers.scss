@@ -91,8 +91,8 @@ $ratio: 1.5; // Perfect Fourth
 
 // PLACEHOLDERS
 %main-wrapper-styles {
-	width: $content-width;
-	max-width: $content-max-width;
+	width: var(--content-width);
+	max-width: var(--content-max-width);
 	margin: 0 auto;
 }
 

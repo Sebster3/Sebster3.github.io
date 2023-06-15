@@ -64,7 +64,7 @@
 
 body {
 	color: var(--base-text-color);
-	font-family: var(--base-main-font-family);
+	font-family: var(--main-font-family);
 	font-weight: var(--base-font-weight);
 	font-size: var(--base-font-size);
 
@@ -88,7 +88,7 @@ body {
 h1 {
 	font-weight: 400;
 	font-size: (modularScale(1) + modularScale(2)) / 2.25;
-	font-family: var(--base-accent-font-family);
+	font-family: var(--accent-font-family);
 	margin: 0 0 1rem;
 	letter-spacing: .035em;
 	text-align: center;
@@ -100,7 +100,7 @@ h1 {
 
 h2 {
 	font-size: modularScale(1);
-	font-family: var(--base-accent-font-family);
+	font-family: var(--accent-font-family);
 	margin: 0 0 .85rem;
 	font-weight: 300;
 	padding: 0 15px;
@@ -109,7 +109,7 @@ h2 {
 
 h3 {
 	font-size: modularScale(0);
-	font-family: var(--base-accent-font-family);
+	font-family: var(--accent-font-family);
 	margin: 0 0 .55rem;
 	font-weight: 600;
 	letter-spacing: .025em;
