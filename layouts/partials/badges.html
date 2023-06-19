@@ -1,21 +1,11 @@
 <div class="badges">
+    {{ $data := site.Data.tags }}
     {{- range . -}}
-        {{ $badge := "" -}}
-        {{ if eq . "webdev" -}}
-            {{ $badge = (dict "url" "/images/badges/webdev.svg" "alt" "Web development badge" "text" "Web Dev" "tagUrl" "/tags/webdev") }}
-        {{ else if eq . "photography" -}}
-            {{ $badge = (dict "url" "/images/badges/photography.svg" "alt" "Photography badge" "text" "Photography" "tagUrl" "/tags/photography") }}
-        {{ else if eq . "graphics" -}}
-            {{ $badge = (dict "url" "/images/badges/graphics.svg" "alt" "graphics artwork badge" "text" "Graphics" "tagUrl" "/tags/graphics") }}
-        {{ else if (or (eq . "js") (eq . "javascript")) -}}
-            {{ $badge = (dict "url" "/images/badges/js.svg" "alt" "Javascript badge" "text" "Javascript" "tagUrl" "/tags/javascript") }}
-        {{ end -}}
-        {{- if (not (eq $badge "")) -}}
-        <a class="badge" href="{{ $badge.tagUrl }}">
-            <img src="{{ $badge.url }}" alt="{{ $badge.alt }}" height="85">
-            <h4>{{ $badge.text }}</h4>
-        </a>
-        {{/*  <a href="{{ $badge.tagUrl }}"><h4 class="badge"><img src="{{ $badge.url }}" alt="{{ $badge.alt }}" height="85">{{ $badge.text }}</h4></a>  */}}
-        {{- end -}}
+        {{ with index $data . }}
+            <a class="badge" href="{{ .tagUrl }}">
+                <img src="{{ .badgeUrl }}" alt="{{ .alt }}" height="85">
+                <h4>{{ .label }}</h4>
+            </a>
+        {{ end }}
     {{- end }}
 </div>

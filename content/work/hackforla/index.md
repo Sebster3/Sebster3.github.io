@@ -1,19 +1,14 @@
 ---
 draft: true
 tags:
-  - webdev
+  - jekyll
   - javascript
 title: "Hack For LA"
 dateString: "February, 2023 – Current"
-cardId: "card-hfla"
-cardBg: "/images/work/hfla/card-bg.jpg"
 # ctaLinks:
 #   - url: https://meatthebutchers.com/
 #     text: Visit the Site
 #     isHollow: false
-# badges:
-#   - webdev
-#   - js
 featuredContent:
   - type: pair
     leftUrl: "/images/work/hfla/feature-pair-1-1.jpg"

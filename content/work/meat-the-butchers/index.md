@@ -6,16 +6,10 @@ tags:
 categories: work
 title: "Meat the Butchers"
 dateString: "October, 2016 – June, 2017"
-cardId: "card-mtb"
-cardBg: "/images/work/mtb/card-bg.jpg"
 # ctaLinks:
 #   - url: https://meatthebutchers.com/
 #     text: Visit the Site
 #     isHollow: false
-# badges:
-#   - graphics
-#   - photography
-#   - webdev
 featuredContent:
   - type: pair
     leftUrl: "/images/work/mtb/feature-pair-1-1.jpg"

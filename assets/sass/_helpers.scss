@@ -7,17 +7,19 @@ $ratio: 1.5; // Perfect Fourth
 // 2. The formula for modular scale is (ratio^value)*base so we need a power function
 @function pow($number, $exponent) {
 	$value: 1;
-	@if $exponent > 0 {
-		@for $i from 1 through $exponent {
-			$value: $value * $number;
-		}
+
+	@if $exponent == 0 {
+		@return $value;
 	}
+	
+	@for $i from 1 through abs($exponent) {
+		$value: $value * $number;
+	}
+
 	@if $exponent < 0 {
-		@for $i from 1 through $exponent {
-			$value: $value * $number;
-		}
-		$value: 1 / $value;
+		$value: calc(1 / $value);
 	}
+
 	@return $value;
 }
 

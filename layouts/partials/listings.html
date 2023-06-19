@@ -7,7 +7,7 @@
 {{- with first $limit $pages }}
 <div class="listings">
     <h3>{{ $title }}</h3>
-    {{ with $.badges }}
+    {{ with $.badges }} {{/* Provided by calling template */}}
         {{ partial "badges.html" . }}
     {{ end }}
     {{ range . }}
