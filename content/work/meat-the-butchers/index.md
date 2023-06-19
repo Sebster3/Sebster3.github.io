@@ -10,10 +10,6 @@ dateString: "October, 2016 – June, 2017"
 #   - url: https://meatthebutchers.com/
 #     text: Visit the Site
 #     isHollow: false
-# badges:
-#   - graphics
-#   - photography
-#   - webdev
 featuredContent:
   - type: pair
     leftUrl: "/images/work/mtb/feature-pair-1-1.jpg"

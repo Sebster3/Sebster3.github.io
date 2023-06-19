@@ -9,9 +9,6 @@ dateString: "September, 2015 – June, 2017"
 #   - url: https://premiermeatcompany.com/
 #     text: Visit the Site
 #     isHollow: false
-# badges:
-#   - graphics
-#   - webdev
 featuredContent:
   - type: pair
     leftUrl: "/images/work/pmc/feature-pair-1-1.jpg"

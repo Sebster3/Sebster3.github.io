@@ -40,7 +40,6 @@
     {{ with $experiencePages}}
         {{ $tags := slice }}
         {{ range . }} {{ $tags = $tags | append .Params.tags }} {{ end }}
-        {{/*  {{ partial "badges.html" (first 6 (uniq $tags)) }}  */}}
         {{ partial "listings.html" (dict "title" "Experience" "limit" 2 "pages" $experiencePages "badges" (first 6 (uniq $tags))) }}
     {{ end }}
     {{/*  {{ with $experiencePages}}
