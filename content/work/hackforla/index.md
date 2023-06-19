@@ -9,9 +9,6 @@ dateString: "February, 2023 – Current"
 #   - url: https://meatthebutchers.com/
 #     text: Visit the Site
 #     isHollow: false
-# badges:
-#   - webdev
-#   - js
 featuredContent:
   - type: pair
     leftUrl: "/images/work/hfla/feature-pair-1-1.jpg"
