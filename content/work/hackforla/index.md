@@ -1,7 +1,7 @@
 ---
 draft: true
 tags:
-  - webdev
+  - jekyll
   - javascript
 title: "Hack For LA"
 dateString: "February, 2023 – Current"

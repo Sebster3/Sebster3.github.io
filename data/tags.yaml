@@ -1,4 +1,11 @@
 ---
+jekyll:
+  badgeUrl: "/images/badges/jekyll.svg"
+  alt: "Jekyll badge"
+  label: "Jekyll"
+  tagGradientStart: "#AB0101"
+  tagGradientEnd: "#FF5252"
+  tagUrl: "/tags/jekyll"
 photography:
   badgeUrl: "/images/badges/photography.svg"
   alt: "Photography badge"
