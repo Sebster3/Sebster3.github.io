@@ -717,6 +717,7 @@ html {
 	font-weight: 400;
 	font-size: 0.75rem;
 	opacity: .75;
+	background-image: linear-gradient(45deg, var(--tag-gradient-start), var(--tag-gradient-end));
 	// max-width: .5rem;
 	// transition: all 0.2s ease-in 0.08s;
 	// cursor: pointer;
@@ -732,34 +733,6 @@ html {
 	&:hover {
 		color: #FFFFFF;
 	}
-
-	&.photography {
-		background-image: linear-gradient(45deg, #698F4B, #C5CE78);
-	}
-	// &.photography:hover {
-	// 	background-image: linear-gradient(45deg, #698F4B, #C5CE78);
-	// }
-
-	&.javascript {
-		background-image: linear-gradient(45deg, #E1C62C, #FD765E);
-	}
-	// &.javascript:hover {
-	// 	background-image: linear-gradient(45deg, #E1C62C, #FD765E);
-	// }
-
-	&.graphics {
-		background-image: linear-gradient(45deg, #5B80FB, #27E4E0);
-	}
-	// &.graphics:hover {
-	// 	background-image: linear-gradient(45deg, #5B80FB, #27E4E0);
-	// }
-
-	&.webdev {
-		background-image: linear-gradient(45deg, #DB42FA, #EEA37A);
-	}
-	// &.webdev:hover {
-	// 	background-image: linear-gradient(45deg, #DB42FA, #EEA37A);
-	// }
 }
 
 footer {
