@@ -1,3 +1,20 @@
+/**
+ * Reveals the hidden listing elements on the current page.
+ * @param {*} event The click event
+ */
+function unhideListings(event) {
+    const referrer = event.target;
+
+    // Remove the `hidden` attribute from all hidden listings
+    referrer.parentElement.querySelectorAll(".listings > a[hidden]")
+        .forEach(el => {
+            el.removeAttribute("hidden")
+        });
+    
+    // Hide the "view All" button
+    referrer.setAttribute("hidden", null);
+}
+
 // External scripts
 /*
      _ _      _       _

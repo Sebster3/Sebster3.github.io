@@ -1,5 +1,5 @@
-{{ with . }}
-<a href="{{ .RelPermalink}}">
+{{ with .page }}
+<a href="{{ .RelPermalink}}" {{if $.hidden }}hidden{{ end }}>
     <div class="listing">
         <h3 class="title">{{ .Title }}</h3>
         {{ with .Params.dateString -}}

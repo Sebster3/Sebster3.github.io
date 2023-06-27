@@ -4,17 +4,22 @@
 {{ with .limit }} {{ $limit = . }} {{ end }}
 {{ with .title }} {{ $title = . }} {{ end }}
 
-{{- with first $limit $pages }}
+{{- with $pages }}
 <div class="listings">
     <h3>{{ $title }}</h3>
     {{ with $.badges }} {{/* Provided by calling template */}}
         {{ partial "badges.html" . }}
     {{ end }}
-    {{ range . }}
-        {{ partial "listing.html" . }}
+    {{ $index := 0 }}
+    {{ $page := false }}
+    {{ range $index, $page := . }}
+        {{ $beyondLimit := (ge $index $limit) }}
+        {{ partial "listing.html" (dict "page" $page "hidden" $beyondLimit) }}
+        {{ $index := (add $index 1) }}
     {{ end }}
     {{ if (gt (len $pages) $limit) }}
-        <a href="/work" class="button hollow">View All</a>
+        <a id="listings-more" onclick="unhideListings(event)" class="button">View All</a>
     {{ end }}
 </div>
+
 {{ end -}}
