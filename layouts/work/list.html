@@ -1,7 +1,0 @@
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-<div class="flex-wrapper">
-    {{ partial "experiences.html" (dict "context" . "title" "Experience") }}
-</div>
-{{ end }}

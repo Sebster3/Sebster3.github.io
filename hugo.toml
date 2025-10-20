@@ -1,0 +1,174 @@
+#FIXME 404 page showing poison theme
+baseURL = 'http://sebastiendlc.com/'
+theme = 'risotto'
+title = 'Sebas'
+author = 'Sebastien De La Cruz'
+copyright = "© Sebastien De La Cruz."
+languageCode = 'en-US'
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
+
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+#ignoreErrors = ["error-remote-getjson"]
+
+# Automatically add content sections to main menu
+sectionPagesMenu = "main"
+anchorize = true
+
+[pagination]
+pagerSize = 10
+
+[params]
+noindex = false
+
+[params.theme]
+palette = "ocean"
+# Other options: 
+#   - "apprentice"
+#   - "base16-dark"
+#   - "base16-light"
+#   - "dracula"
+#   - "gruvbox-dark"
+#   - "gruvbox-light"
+#   - "material"
+#   - "papercolor-dark"
+#   - "papercolor-light"
+#   - "solarized-dark"
+#   - "solarized-light"
+#   - "tender"
+#   - "tokyo-night-dark"
+#   - "tokyo-night-light"
+#   - "windows-95"
+#   - "windows-95-light"
+#   - "atelier-dune"
+#   - "decaf"
+#   - "eighties"
+
+# Sidebar: about/bio
+[params.about]
+title = "Sebastien De La Cruz"
+description = "Trying things, making mistakes, and learning from them."
+# unicode/emoji logo:
+logo = "🙃"
+# or use an image:
+#logo_image = "images/rice.svg"
+
+# Sidebar: social links
+# Available icon sets:
+# * FontAwesome 6 <https://fontawesome.com/> ('fa-brands', 'fa-normal', or 'fa-solid' for brands)
+# * Academicons <https://jpswalsh.github.io/academicons> ('ai ai-')
+
+[[params.socialLinks]]
+icon = "fa-brands fa-instagram"
+title = "Instagram"
+url = "https://instagram.com/aleczanderphoto/"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-telegram"
+title = "Telegram"
+url = "https://t.me/sebasthecrab"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-headphones"
+title = "Listenbrainz"
+url = "https://listenbrainz.org/user/Sebster4/"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-gas-pump"
+title = "Fuelly"
+url = "https://www.fuelly.com/car/toyota/prius/2017/sebster3/1282620"
+
+# [[params.socialLinks]]
+# icon = "fa-brands fa-github"
+# title = "GitHub"
+# url = "https://github.com/sebster4"
+
+# [[params.socialLinks]]
+# icon = "fa-solid fa-envelope"
+# title = "Email"
+# url = "mailto:example@example.com"
+
+# [[params.socialLinks]]
+# icon = "fa-brands fa-lastfm"
+# title = "last.fm"
+# url = "https://www.last.fm/user/Sebster4"
+
+[menu]
+
+  # [[menu.main]]
+  #   identifier = "now"
+  #   name = "Now"
+  #   url = "/now/"
+  #   weight = 1
+  
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+  # [[menu.main]]
+  #   identifier = "pics"
+  #   name = "Pics"
+  #   url = "/pics/"
+  #   weight = 3
+ 
+  # [[menu.main]]
+  #   identifier = "uses"
+  #   name = "Uses"
+  #   url = "/uses/"
+  #   weight = 4
+
+  # [[menu.main]]
+  #   identifier = "interests"
+  #   name = "Interests"
+  #   url = "/interests/"
+  #   weight = 100
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+# For hugo >= 0.60.0, enable inline HTML
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+
+  # Table of contents
+  # Add toc = true to content front matter to enable
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+    ordered    = true
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.x]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.x]
+    disableInlineCSS = true

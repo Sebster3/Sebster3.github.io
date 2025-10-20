@@ -1,0 +1,17 @@
+{{ $pages := where .Site.RegularPages "Section" "pics" }}
+{{ if gt $pages.Len 1 }}
+<h2>latest Photo</h2>
+<article>
+{{ range $pages.Limit 1 -}}
+    <p><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></p>
+    {{ $imagePath := .Params.featuredImagePath }}
+    {{ $imageCaption := or (.Params.featuredImageCaption) (">> CAPTION MISSING <<") }}
+    {{with $imagePath }}
+    <figure>
+        <img width="100%" src="{{.}}">
+        <figcaption>{{ $imageCaption }}</figcaption>
+    </figure>
+    {{ end }}
+{{- end }}
+{{- end }}
+</article>
