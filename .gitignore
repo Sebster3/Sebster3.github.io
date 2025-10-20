@@ -1,6 +1,8 @@
 .sass-cache
 _sass/prepros.cfg
 
+*.sublime-workspace
+
 # Created by https://www.toptal.com/developers/gitignore/api/sass,hugo,visualstudiocode,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=sass,hugo,visualstudiocode,macos
 

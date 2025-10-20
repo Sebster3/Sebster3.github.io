@@ -1,0 +1,23 @@
+/* Main menu */
+.main-nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem 1rem;
+}
+
+.main-nav li {
+    text-transform: lowercase;
+}
+
+.main-nav li {
+    text-transform: lowercase;
+    list-style: none;
+}
+
+.main-nav li:not(.nomarker)::before {
+    content: "./";
+}

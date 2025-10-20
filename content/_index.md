@@ -7,11 +7,13 @@ title: "Home"
 </style>
 
 
-```
-░█░█░█▀▀░█░░░█▀▀░█▀█░█▄█░█▀▀░█
-░█▄█░█▀▀░█░░░█░░░█░█░█░█░█▀▀░▀
-░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀
-```
+<style>
+	img {
+		height: 6rem;
+	}
+</style>
+![Welcome banner](svg/welcome-type-banner.svg)
+
 <!-- Created with https://www.asciiart.eu/text-to-ascii-art -->
 
 Hi There, I'm Sebastien!

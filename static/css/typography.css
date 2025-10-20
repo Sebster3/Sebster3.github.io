@@ -107,7 +107,7 @@ a:hover, a:active, a.active {
 /* Lists */
 ul {
     margin: 0 0 1.5rem 0;
-    padding-left: 1.25rem;
+    padding-left: 0;
 }
 
 ol {
@@ -122,16 +122,21 @@ ol ol {
     margin: 0;
 }
 
-ul li::marker {
-    content: '∗\00A0';
+ul li {
+    list-style: none;
+}
+
+ul li:not(.nomarker)::before {
+/*    content: '∗\00A0';*/
+    content: '~\00A0';
     color: var(--muted);
 }
 
-ul li.active::marker {
+ul li.active::before {
     color: var(--hover);
 }
 
-ol li::marker {
+ol li::before {
     color: var(--muted);
 }
 
@@ -204,7 +209,7 @@ pre {
 /* Fix overflow when config markup.highlight.lineNos is true */
 /* See https://github.com/joeroe/risotto/issues/41 */
 .highlight div {
-	overflow-x: auto;
+    overflow-x: auto;
 }
 
 /* Emphasis */
