@@ -1,0 +1,16 @@
+{{/* range .Page.Site.Pages.Limit 1 */}}
+
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ range $posts.Limit 3 }}
+<h2>latest Posts</h2>
+<article class="post">
+    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    <p class="post__meta">
+        <span class="date">{{ .Date.Format "2 January 2006" }}</span>
+    </p>
+    <section class="post__summary">
+        {{ .Summary }}
+        <a href="{{ .Permalink }}">Read post</a>
+    </section>
+</article>
+{{ end }}

@@ -1,0 +1,9 @@
+{{ $pages := where .Site.RegularPages "Section" "posts" }}
+{{ with $pages }}
+<h2>latest Posts</h2>
+<ul>
+{{ range .Limit 3 -}}
+    <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
+{{- end }}
+</ul>
+{{ end }}

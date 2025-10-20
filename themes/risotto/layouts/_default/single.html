@@ -17,25 +17,9 @@
         </p>
     {{ end }}
 
-    {{ $Site := .Site }}
-    {{ if .Params.series }}
-    <p class="seriesname">
-        Series: <a href="{{ $Site.BaseURL }}/series/{{ .Params.series | urlize }}">{{ .Params.series }}</a>
-    </p>
-    {{ end }}
-
-    {{ if .Params.tags }}
-    <p class="tags">Tags: 
-      {{ range .Params.tags }}
-        <a class="tag-{{ . }}" href='{{ "/tags/" }}{{ . | urlize }}'> {{ . }}</a>
-      {{ end }}
-    </p>
-    {{ end }}
-
     {{ if and (.Params.toc) (.TableOfContents) }}
-        <hr>
-        On this page:
-        {{ .TableOfContents }}
+	    <hr>
+	    On this page:
+	    {{ .TableOfContents }}
     {{ end }}
 {{ end }}
-
