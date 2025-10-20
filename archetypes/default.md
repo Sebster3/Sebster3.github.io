@@ -1,5 +1,12 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: {{ replace .File.ContentBaseName "-" " " | title }}
+author: Sebas
 date: {{ .Date }}
-draft: true
+description: TODO Add description
 ---
+
+TODO Add summary
+
+<!--more -->
+
+TODO Add body content
