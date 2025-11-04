@@ -1,0 +1,11 @@
+{{ $rating := .Params.coffeepassport.rating }}
+
+<li>
+	{{ if $rating -}}
+	{{- if gt $rating 0 }}★{{else}}☆{{end -}}
+	{{- if gt $rating 1 }}★{{else}}☆{{end -}}
+	{{- if gt $rating 2 }}★{{else}}☆{{end -}}
+	{{- if gt $rating 3 }}★{{else}}☆{{end -}}
+	{{- if gt $rating 4 }}★{{else}}☆{{end }}
+	{{- end }}
+	<a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>

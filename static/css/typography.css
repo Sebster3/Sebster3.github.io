@@ -273,6 +273,15 @@ img {
 /*    margin-bottom: 1.5em;*/
 }
 
+.decaf-banner {
+    background: var(--base0D);
+    color: var(--bg);
+}
+
+.decaf-banner.planned {
+    background: var(--base0A);
+}
+
 /* Colour classes */
 .base00 { color: var(--base00); }
 .base01 { color: var(--base01); }
