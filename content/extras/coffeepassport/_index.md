@@ -13,4 +13,6 @@ My thoughts on the coffee shops, cafes, and other places I've been to that serve
 
 A one-star place is a last resort. On the other hand, I would seek out a five-star place to spend my time at, try multiple drinks/pastries, and highly recommend! Five stars doesn't mean "perfect" --- because nothing is --- but it does get the highest marks.
 
-> Recent updates towards the top of the list.
+As an avid decaf drinker, I also make note of whether decaf is available or not.
+
+Recent updates towards the top of the list.
